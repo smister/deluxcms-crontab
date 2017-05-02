@@ -12,7 +12,7 @@ class m170323_023047_crontab extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%crontab}}', [
+        $this->createTable('{{%crontabs}}', [
             'id' => $this->primaryKey(),
             'description' => $this->string(100)->notNull()->defaultValue(''),
             'type' => $this->smallInteger()->notNull()->defaultValue(1)->comment('类型;[1=系统],[2=php类型]'),
