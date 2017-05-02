@@ -1,0 +1,16 @@
+{
+  "name": "deluxcms/crontab",
+  "description": "manage system crontab and php crontab",
+  "keywords": ["yii2", "deluxcms", "crontab", "crontab manage"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "smister",
+      "email": "398009951@qq.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": { "deluxcms\\crontab\\": "" }
+  }
+}
