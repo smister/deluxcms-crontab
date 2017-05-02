@@ -44,12 +44,12 @@ www     ALL=(ALL:ALL) NOPASSWD:ALL
 'components' => [
         ...
         'crontabManager' => [
-            'class' => 'vendor\deluxcms\crontab\components\CrontabManager', //设置manager类
+            'class' => 'deluxcms\crontab\components\CrontabManager', //设置manager类
             //'binCrontab' => 'sudo crontab',//设置系统的crontab执行路径
             'crontainerClass' => [ //设置crontab获取的类
-                ['class' => '\vendor\deluxcms\crontab\components\CrontabDb'],
+                ['class' => 'deluxcms\crontab\components\CrontabDb'],
                 [ //这个是执行类我们可以动态添加命令进去
-                    'class' =>'\vendor\deluxcms\crontab\components\CrontabList',
+                    'class' =>'deluxcms\crontab\components\CrontabList',
                     'crontabs' =>[
                         '*/2 * * * * ls /tmp',  //格式1
                         [   //格式2
@@ -88,7 +88,7 @@ class PhpdeamonController extends Controller
     {
         return [
             'index' => [
-                'class' => 'vendor\deluxcms\crontab\actions\PhpDeamonAction'
+                'class' => 'deluxcms\crontab\actions\PhpDeamonAction'
             ]
         ];
     }
