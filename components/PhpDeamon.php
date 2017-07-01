@@ -128,7 +128,7 @@ class PhpDeamon extends Component
     protected function parseDays($day)
     {
         $BeginDate=date('Y-m-01', strtotime(date("Y-m-d")));
-        $endDay = date('Y-m-d', strtotime("$BeginDate +1 month -1 day"));
+        $endDay = date('d', strtotime("$BeginDate +1 month -1 day"));
         return $this->parseDate($day, 1, $endDay);
     }
 
