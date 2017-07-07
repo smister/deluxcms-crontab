@@ -162,7 +162,9 @@ class PhpDeamon extends Component
             $result = $this->parseDivide($date, $min, $max);
         } elseif (strpos($date, '-') !== false) {
             $result = $this->parseCrossbar($date, $min, $max);
-        }
+        } else {
+			$result = [(int)$date];
+		}
         return array_unique($result);
     }
 
